@@ -13,6 +13,10 @@ public class SeleniumUtility extends BaseSetup {
     private WebDriverWait getWait() {
         return new WebDriverWait(getDriver(), Duration.ofSeconds(20));
     }
+    private WebElement waitForVisibility(By locator) {
+        return getWait().until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
 
     // create a method to click on a given locator
     public void clickOnElement(By locator) {
@@ -22,5 +26,10 @@ public class SeleniumUtility extends BaseSetup {
 
     public void sendText(By locator, String value) {
         getWait().until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(value);
+    }
+
+    // Create method for getting the text of a locator
+    public String getElementText(By locator) {
+        return waitForVisibility(locator).getText();
     }
 }
