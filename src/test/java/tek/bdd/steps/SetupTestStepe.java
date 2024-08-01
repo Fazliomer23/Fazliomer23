@@ -1,11 +1,11 @@
-package step;
+package tek.bdd.steps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
-import utility.SeleniumUtility;
+import tek.bdd.utility.SeleniumUtility;
 
-public class SetupTestStep extends SeleniumUtility {
+public class SetupTestStepe extends SeleniumUtility {
     @Given("Open browser and navigate to retail app")
     public void openBrowserAndNavigate() {
         setupBrowser();
