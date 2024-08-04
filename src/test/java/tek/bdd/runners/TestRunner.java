@@ -5,9 +5,11 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "classpath:features/SetupTest.feature",
-        glue = "tek.bdd.steps"
+        features = "classpath:features/SecurityTest.feature", // Directory for Feature file
+        glue = "tek.bdd.steps", //Package for all the steps
+        dryRun = false //set to true to scan feature for unimplemented steps
 )
 public class TestRunner {
     // This class will be used to run Cucumber tests
+
 }
